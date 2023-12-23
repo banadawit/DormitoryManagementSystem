@@ -103,7 +103,11 @@ this DisplayBuilding method display both buildingW and buildingM
             e.printStackTrace();
         }
     }
+/* 
+this DisplayBuildingwith procter ppurpose is as its name says display building with assigned procter
+prom procter table
 
+**/
     public static void DisplayBuildingWithProctor() {
         try (Connection connection = DriverManager.getConnection(JDBC_URL, USERNAME, PASSWORD)) {
             String selectQuery = "SELECT * FROM proctors";
