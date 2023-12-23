@@ -27,7 +27,7 @@ public class Buildings implements Constants {
         addZone("female");
         addZone("male");
     }
-// this is adding building
+// this is adding building table
     public static void addBuildingW(String name) {
         try (Connection connection = DriverManager.getConnection(JDBC_URL, USERNAME, PASSWORD)) {
             createBuildingTable("buildingW");
