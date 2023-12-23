@@ -32,7 +32,7 @@ buliding and zone
         addZone("male");
     }
     /*
-    this addBuilding methodd purpose is to add building to buildingW table in the database
+    this addBuildingW methodd purpose is to add building to buildingW table in the database
     table in database
     **/
 
@@ -51,7 +51,7 @@ buliding and zone
         }
     }
     /*
-    this addBuilding methodd purpose is to add building to buildingM table in the database
+    this addBuildingM methodd purpose is to add building to buildingM table in the database
     table in database
     **/
     public static void addBuildingM(String name) {
