@@ -164,7 +164,7 @@ public class Buildings implements Constants {
 
     static void navbar() throws InterruptedException, IOException {
         System.out.println("\u001B[35m");
-        System.out.println("\t---***WELL COME TO BUILDING SYSTEM***---");
+        System.out.println("\t---****WELL COME TO BUILDING SYSTEM****---");
         System.out.println("\u001B[0m");
         System.out.println("\t\t \uD83D\uDC491. display building available ");
         System.out.println("\t\t \uD83D\uDC492. display Proctor with their assigned Building");
