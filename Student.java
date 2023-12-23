@@ -115,19 +115,6 @@ public class Student extends PersonInfo implements Constants {
         return "";
     }
 
-//    private static int getStudentCountInDorm(Connection connection, String dormName) throws SQLException {
-//        String query = "SELECT COUNT(*) FROM dorm_rooms WHERE building = ?";
-//        try (PreparedStatement preparedStatement = connection.prepareStatement(query)) {
-//            preparedStatement.setString(1, dormName);
-//            try (ResultSet resultSet = preparedStatement.executeQuery()) {
-//                if (resultSet.next()) {
-//                    return resultSet.getInt(1);
-//                }
-//            }
-//        }
-//        return 0;
-//    }
-
 
 
 
