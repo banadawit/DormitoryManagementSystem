@@ -200,6 +200,10 @@ public class Buildings implements Constants {
                 new ProcessBuilder("cmd", "/c", "cls").inheritIO().start().waitFor();
                 System.out.print("\t Enter Building Name: ");
                 String bd = read.nextLine();
+
+                //bellow method used to create new table in database dormitory
+                // when new building is added because that building needs some
+                // information to store
                 try (Connection connection = DriverManager.getConnection(JDBC_URL, USERNAME, PASSWORD)) {
                     String tableName = bd + "_table"; // You can modify the table name as needed
                     String createTableQuery = "CREATE TABLE IF NOT EXISTS " + tableName + " (" +
