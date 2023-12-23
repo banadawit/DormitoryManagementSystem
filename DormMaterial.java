@@ -82,6 +82,7 @@ public class DormMaterial extends Dorm_Room implements Constants {
             e.printStackTrace();
         }
     }
+    //updating material
 
     private static void updateMaterial(Connection connection, String room, int bedNum, int lockerNum, int tableNum) {
         try {
