@@ -19,20 +19,29 @@ public class Proctor extends PersonInfo implements Constants {
     }
 
     public static void navbar() throws InterruptedException, IOException {
-        System.out.println("\t===========Hello welcome to proctor part: here you are procter");
-        System.out.println("\tset of chooses are below:\n\n");
+
+        System.out.print("\u001B[38;5;135m");
+        System.out.println("\t---***Hello Welcome To Proctor Part: Here you are procter***---");
+        System.out.print("\u001B[0m");
+        System.out.println("   \t\t\tSet of chooses are below:\n");
+
         Scanner read = new Scanner(System.in);
 
         int n = 0;
         while (n != 7) {
             new ProcessBuilder("cmd", "/c", "cls").inheritIO().start().waitFor();
-            System.out.println("Enter your your choose: ");
+
+            System.out.println("\u001B[35m");
+            System.out.println("\t\t---***Enter your your choose***--- ");
+            System.out.println("    ===========================================");
+            System.out.println("\u001B[0m");
             System.out.println(
-                    "\t1. checking material availability\n" + "\t2.add material to room\n"
-                            + "\t3 remove material from room\n"
-                            +
-                            "\t4.Assign student to dorm\n"
-                            + "\t5 removing student from dorm\n");
+                    "\t\t\uD83D\uDC491. Add material to room\n"
+                            +"\t\t\uD83D\uDC492. Checking material availability\n"
+                            + "\t\t\uD83D\uDC493. Remove material to room\n"
+                            + "\t\t\uD83D\uDC494. Assign student from dorm\n");
+                             + "\t\t\uD83D\uDC495 removing student from dorm\n");
+
             n = read.nextInt();
             switch (n) {
                 case 1:
