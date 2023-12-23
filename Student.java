@@ -87,6 +87,7 @@ public class Student extends PersonInfo implements Constants {
             e.printStackTrace();
         }
     }
+
     private static int getTotalRoomCount(Connection connection) throws SQLException {
         String query = "SELECT COUNT(*) FROM dorm_materials";
         try (PreparedStatement preparedStatement = connection.prepareStatement(query);
@@ -114,6 +115,19 @@ public class Student extends PersonInfo implements Constants {
         }
         return "";
     }
+
+//    private static int getStudentCountInDorm(Connection connection, String dormName) throws SQLException {
+//        String query = "SELECT COUNT(*) FROM dorm_rooms WHERE building = ?";
+//        try (PreparedStatement preparedStatement = connection.prepareStatement(query)) {
+//            preparedStatement.setString(1, dormName);
+//            try (ResultSet resultSet = preparedStatement.executeQuery()) {
+//                if (resultSet.next()) {
+//                    return resultSet.getInt(1);
+//                }
+//            }
+//        }
+//        return 0;
+//    }
 
 
 
@@ -156,8 +170,9 @@ public class Student extends PersonInfo implements Constants {
                 System.out.println("you entered wrong input");
                 break;
         }
-
     }
+
+
     static void studentPage() {
         System.out.println("Hello student! Here you can search for your dorm.");
         Scanner read = new Scanner(System.in);
@@ -166,9 +181,13 @@ public class Student extends PersonInfo implements Constants {
         System.out.println(whereIsmyDorm(username));
     }
 
-
-
-    
+    private static void insertStudent(Connection connection, String studentName, String building) throws SQLException {
+        String query = "INSERT INTO dorm_rooms (student_name, building) VALUES (?, ?)";
+        try (PreparedStatement preparedStatement = connection.prepareStatement(query)) {
+            preparedStatement.setString(1, studentName);
+            preparedStatement.setString(2, building);
+            preparedStatement.executeUpdate();
+        }
+    }
 }
-
 
