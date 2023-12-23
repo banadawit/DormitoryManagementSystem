@@ -126,7 +126,11 @@ prom procter table
     }
 
     static Set<String> proct = new HashSet<>();
+/* 
+this getproctername method purpose is as its name says retieve  procter name assigned procter
+from procter table for the men assined
 
+**/
     static void getProctroNameMen() {
         try (Connection connection = DriverManager.getConnection(JDBC_URL, USERNAME, PASSWORD)) {
             String selectQuery = "SELECT * FROM proctors WHERE gender = 'M'";
@@ -162,7 +166,7 @@ from procter table for the women assined
             e.printStackTrace();
         }
     }
-
+//add procter to building to procter table
     static void addProcterToBuilding(String name) {
         try (Connection connection = DriverManager.getConnection(JDBC_URL, USERNAME, PASSWORD)) {
             getProctroNameWomen();
@@ -171,7 +175,7 @@ from procter table for the women assined
             e.printStackTrace();
         }
     }
-
+//
     private static void addProctorToBuilding(Connection connection, String buildingName) {
         try {
             for (String proctor : proct) {
@@ -186,7 +190,7 @@ from procter table for the women assined
             e.printStackTrace();
         }
     }
-
+// to display menu option for  the user to choose from display navigatory menu
     static void navbar() throws InterruptedException, IOException {
         System.out.println("\n\n");
         System.out.println("\t\t 1. display building available ");
@@ -200,7 +204,7 @@ from procter table for the women assined
         int ch = read.nextInt();
         Switcher(ch);
     }
-
+//display detail about specific building allow navigatory to the detail
     static public void displayBuildingDetail(String name) throws InterruptedException, IOException {
         System.out.println("\t\t\t Welcome \n\t\t\t HERE ARE ABOUT DORMTORY \n");
         System.out.println("\t\t press any key you want to navigate in");
