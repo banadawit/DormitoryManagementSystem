@@ -29,7 +29,7 @@ public class Proctor extends PersonInfo implements Constants {
             System.out.println("Enter your your choose: ");
             System.out.println(
                     "\t1. checking material availability\n" + "\t2.add material to room\n"
-                            + "\t3 remove material to room\n"
+                            + "\t3 remove material from room\n"
                             +
                             "\t4.Assign student to dorm\n"
                             + "\t5 removing student from dorm\n");
