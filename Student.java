@@ -25,7 +25,7 @@ public class Student extends PersonInfo implements Constants {
             e.printStackTrace();
         }
     }
-
+//building forms
     public static String whereIsmyDorm(String studName) {
         try (Connection connection = DriverManager.getConnection(JDBC_URL, USERNAME, PASSWORD)) {
             String query = "SELECT building FROM dorm_rooms WHERE student_name = ?";
