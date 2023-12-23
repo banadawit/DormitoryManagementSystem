@@ -210,7 +210,7 @@ from procter table for the women assined
         System.out.println("\t\t press any key you want to navigate in");
         navbar();
     }
-
+// to to handle defferent menu options
     static void Switcher(int ch) throws InterruptedException, IOException {
         Scanner read = new Scanner(System.in);
         switch (ch) {
@@ -263,7 +263,7 @@ from procter table for the women assined
                 break;
         }
     }
-
+//this createBuildingTabl method is to create specified building tagble if not exist
     private static void createBuildingTable(String tableName) {
         try (Connection connection = DriverManager.getConnection(JDBC_URL, USERNAME, PASSWORD)) {
             String createTableQuery = "CREATE TABLE IF NOT EXISTS " + tableName + " (" +
@@ -276,7 +276,7 @@ from procter table for the women assined
             e.printStackTrace();
         }
     }
-
+// this createZoneTable method is to creat zone table if it not exist
     public static void createZoneTable() {
         try (Connection connection = DriverManager.getConnection(JDBC_URL, USERNAME, PASSWORD)) {
             String createTableQuery = "CREATE TABLE IF NOT EXISTS zone (" +
@@ -291,6 +291,7 @@ from procter table for the women assined
             e.printStackTrace();
         }
     }
+    // this adBuildingM is to create table that buildingM  if doesn't exist
     public static void adBuildingM() {
         try (Connection connection = DriverManager.getConnection(JDBC_URL, USERNAME, PASSWORD)) {
             String createTableQuery = "CREATE TABLE IF NOT EXISTS BuildingM (" +
@@ -306,6 +307,7 @@ from procter table for the women assined
             e.printStackTrace();
         }
     }
+    //this adBuildingW is to creat buildingW table if not exist
     public static void adBuildingW() {
         try (Connection connection = DriverManager.getConnection(JDBC_URL, USERNAME, PASSWORD)) {
             String createTableQuery = "CREATE TABLE IF NOT EXISTS buildingw (" +
