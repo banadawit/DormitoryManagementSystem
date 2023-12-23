@@ -10,17 +10,13 @@ import java.util.Set;
 
 public class Buildings implements Constants {
     private static final String JDBC_URL = "jdbc:mysql://localhost:3306/DORMITORY";
-    private static final String USERNAME = "root";
-    private static final String PASSWORD = "****";
+    private static final String USERNAME = "ayana";
+    private static final String PASSWORD = "ayu10upme";
 
     public Buildings() {
         defaults();
     }
-/*
-this default method purpose: setup the buildings and zones and add bothe
-buliding and zone
 
-**/
     public void defaults() {
         addBuildingW("A3");
         addBuildingW("A1");
@@ -31,10 +27,6 @@ buliding and zone
         addZone("female");
         addZone("male");
     }
-    /*
-    this addBuildingW methodd purpose is to add building to buildingW table in the database
-    table in database
-    **/
 
     public static void addBuildingW(String name) {
         try (Connection connection = DriverManager.getConnection(JDBC_URL, USERNAME, PASSWORD)) {
@@ -50,10 +42,7 @@ buliding and zone
             e.printStackTrace();
         }
     }
-    /*
-    this addBuildingM methodd purpose is to add building to buildingM table in the database
-    table in database
-    **/
+
     public static void addBuildingM(String name) {
         try (Connection connection = DriverManager.getConnection(JDBC_URL, USERNAME, PASSWORD)) {
             createBuildingTable("buildingM");
@@ -68,10 +57,7 @@ buliding and zone
             e.printStackTrace();
         }
     }
-/*
-this addZone method add Zone (male for female dorm building) and add data to the zone table
-that is aothomatically created
-**/
+
     public static void addZone(String type) {
         try (Connection connection = DriverManager.getConnection(JDBC_URL, USERNAME, PASSWORD)) {
             createZoneTable();
@@ -85,9 +71,7 @@ that is aothomatically created
             e.printStackTrace();
         }
     }
-/*
-this DisplayBuilding method display both buildingW and buildingM
-**/
+
     public static void DisplayBuilding() {
         try (Connection connection = DriverManager.getConnection(JDBC_URL, USERNAME, PASSWORD)) {
             String selectQuery = "SELECT * FROM buildingW UNION SELECT * FROM buildingM";
@@ -103,11 +87,7 @@ this DisplayBuilding method display both buildingW and buildingM
             e.printStackTrace();
         }
     }
-/* 
-this DisplayBuildingwith procter ppurpose is as its name says display building with assigned procter
-prom procter table
 
-**/
     public static void DisplayBuildingWithProctor() {
         try (Connection connection = DriverManager.getConnection(JDBC_URL, USERNAME, PASSWORD)) {
             String selectQuery = "SELECT * FROM proctors";
@@ -126,11 +106,7 @@ prom procter table
     }
 
     static Set<String> proct = new HashSet<>();
-/* 
-this getproctername method purpose is as its name says retieve  procter name assigned procter
-from procter table for the men assined
 
-**/
     static void getProctroNameMen() {
         try (Connection connection = DriverManager.getConnection(JDBC_URL, USERNAME, PASSWORD)) {
             String selectQuery = "SELECT * FROM proctors WHERE gender = 'M'";
@@ -146,11 +122,7 @@ from procter table for the men assined
             e.printStackTrace();
         }
     }
-/* 
-this getproctername method purpose is as its name says retieve  procter name assigned procter
-from procter table for the women assined
 
-**/
     static void getProctroNameWomen() {
         try (Connection connection = DriverManager.getConnection(JDBC_URL, USERNAME, PASSWORD)) {
             String selectQuery = "SELECT * FROM proctors WHERE gender != 'M'";
@@ -166,7 +138,7 @@ from procter table for the women assined
             e.printStackTrace();
         }
     }
-//add procter to building to procter table
+
     static void addProcterToBuilding(String name) {
         try (Connection connection = DriverManager.getConnection(JDBC_URL, USERNAME, PASSWORD)) {
             getProctroNameWomen();
@@ -175,7 +147,7 @@ from procter table for the women assined
             e.printStackTrace();
         }
     }
-//
+
     private static void addProctorToBuilding(Connection connection, String buildingName) {
         try {
             for (String proctor : proct) {
@@ -190,7 +162,7 @@ from procter table for the women assined
             e.printStackTrace();
         }
     }
-// to display menu option for  the user to choose from display navigatory menu
+
     static void navbar() throws InterruptedException, IOException {
         System.out.println("\n\n");
         System.out.println("\t\t 1. display building available ");
@@ -204,13 +176,13 @@ from procter table for the women assined
         int ch = read.nextInt();
         Switcher(ch);
     }
-//display detail about specific building allow navigatory to the detail
+
     static public void displayBuildingDetail(String name) throws InterruptedException, IOException {
         System.out.println("\t\t\t Welcome \n\t\t\t HERE ARE ABOUT DORMTORY \n");
         System.out.println("\t\t press any key you want to navigate in");
         navbar();
     }
-// to to handle defferent menu options
+
     static void Switcher(int ch) throws InterruptedException, IOException {
         Scanner read = new Scanner(System.in);
         switch (ch) {
@@ -228,6 +200,22 @@ from procter table for the women assined
                 new ProcessBuilder("cmd", "/c", "cls").inheritIO().start().waitFor();
                 System.out.print("\t Enter Building Name: ");
                 String bd = read.nextLine();
+                try (Connection connection = DriverManager.getConnection(JDBC_URL, USERNAME, PASSWORD)) {
+                    String tableName = bd + "_table"; // You can modify the table name as needed
+                    String createTableQuery = "CREATE TABLE IF NOT EXISTS " + tableName + " (" +
+                            "dorm_name VARCHAR(255)," +
+                            "locker_num INT," +
+                            "bed_num INT," +
+                            "table_num INT" +
+                            ")";
+
+                    try (Statement statement = connection.createStatement()) {
+                        statement.executeUpdate(createTableQuery);
+                        System.out.println("Table created successfully!");
+                    }
+                } catch (SQLException e) {
+                    e.printStackTrace();
+                }
                 System.out.println(
                         "\t\t Add the new building to Zone "
                                 + "\t\t\n Available zone is Female and Male:" +
@@ -263,7 +251,7 @@ from procter table for the women assined
                 break;
         }
     }
-//this createBuildingTabl method is to create specified building tagble if not exist
+
     private static void createBuildingTable(String tableName) {
         try (Connection connection = DriverManager.getConnection(JDBC_URL, USERNAME, PASSWORD)) {
             String createTableQuery = "CREATE TABLE IF NOT EXISTS " + tableName + " (" +
@@ -276,7 +264,7 @@ from procter table for the women assined
             e.printStackTrace();
         }
     }
-// this createZoneTable method is to creat zone table if it not exist
+
     public static void createZoneTable() {
         try (Connection connection = DriverManager.getConnection(JDBC_URL, USERNAME, PASSWORD)) {
             String createTableQuery = "CREATE TABLE IF NOT EXISTS zone (" +
@@ -291,7 +279,6 @@ from procter table for the women assined
             e.printStackTrace();
         }
     }
-    // this adBuildingM is to create table that buildingM  if doesn't exist
     public static void adBuildingM() {
         try (Connection connection = DriverManager.getConnection(JDBC_URL, USERNAME, PASSWORD)) {
             String createTableQuery = "CREATE TABLE IF NOT EXISTS BuildingM (" +
@@ -307,7 +294,6 @@ from procter table for the women assined
             e.printStackTrace();
         }
     }
-    //this adBuildingW is to creat buildingW table if not exist
     public static void adBuildingW() {
         try (Connection connection = DriverManager.getConnection(JDBC_URL, USERNAME, PASSWORD)) {
             String createTableQuery = "CREATE TABLE IF NOT EXISTS buildingw (" +
@@ -341,6 +327,4 @@ class tryout implements Constants {
         Buildings.displayBuildingDetail("A");
     }
 }
-
-//last line
 
