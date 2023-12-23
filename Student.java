@@ -134,12 +134,16 @@ public class Student extends PersonInfo implements Constants {
 
     public static void navbar() throws InterruptedException, IOException {
         Scanner read = new Scanner(System.in);
-        System.out.println("\t===========welcome to student part===============\n\n");
-        System.out.println("\t\t here are your  navigatio");
-        System.out.println("\t1. add new student:"
-                + "\n\t2.Remove some student"
-                + "\n\t3. search students dormF"
-                + "\n\t4.See lists of all Dormitory.Student ");
+
+        System.out.println("\u001B[33m");
+        System.out.println("\t\t----****WELL COME TO STUDENT PART****----");
+        System.out.println("\t------------------------------------------------");
+        System.out.println("\u001B[0m");
+        System.out.println("\t\t\t\uD83D\uDC491. Add new student:"
+                + "\n\t\t\t\uD83D\uDC492. Remove some student"
+                + "\n\t\t\t\uD83D\uDC493. search students dormF"
+                + "\n\t\t\t\uD83D\uDC494. See lists of all Student ");
+
         int ch = read.nextInt();
         switch (ch) {
             case 1:
