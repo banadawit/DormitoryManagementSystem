@@ -12,7 +12,7 @@ public class DormMaterial extends Dorm_Room implements Constants {
     DormMaterial() {
         defualDormWithMaterial();
     }
-
+//inserting  data
     public static void defualDormWithMaterial() {
         try (Connection connection = DriverManager.getConnection(JDBC_URL, USERNAME, PASSWORD)) {
             String createTableQuery = "CREATE TABLE IF NOT EXISTS dorm_materials (" +
