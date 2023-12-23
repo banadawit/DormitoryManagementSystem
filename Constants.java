@@ -21,3 +21,5 @@ public interface Constants {
     static final String BUILDING_F = "BUILDING_F";
     static final String BUILDING_M = "BUILDING_M";
 }
+
+// last line
