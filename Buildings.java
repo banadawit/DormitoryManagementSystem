@@ -104,7 +104,6 @@ public class Buildings implements Constants {
             e.printStackTrace();
         }
     }
-
     static Set<String> proct = new HashSet<>();
 
     static void getProctroNameMen() {
@@ -147,7 +146,7 @@ public class Buildings implements Constants {
             e.printStackTrace();
         }
     }
-
+//connecting database
     private static void addProctorToBuilding(Connection connection, String buildingName) {
         try {
             for (String proctor : proct) {
