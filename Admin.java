@@ -21,8 +21,8 @@ interface IdGenerator {
 }
 public class Admin extends PersonInfo implements AdminPage, Constants {
     private static final String JDBC_URL = "jdbc:mysql://localhost:3306/dormitory";
-    private static final String USERNAME = "root";
-    private static final String PASSWORD = "banned1234";
+    private static final String USERNAME = "ayana";
+    private static final String PASSWORD = "ayu10upme";
 
     private Connection connection;
 
@@ -181,7 +181,7 @@ public class Admin extends PersonInfo implements AdminPage, Constants {
             }
 
             // Insert the student into the dorm_rooms table
-            Dorm_Room.insertStudentToDorm(connection, name, dormName);
+//            Dorm_Room.insertStudentToDorm(connection, name, dormName);
 
         } catch (SQLException e) {
             e.printStackTrace();
@@ -245,9 +245,9 @@ public class Admin extends PersonInfo implements AdminPage, Constants {
 class tyring {
     public static void main(String[] args) throws InterruptedException, IOException {
         Admin a = new Admin();
-        Buildings.adBuildingW();
-        Buildings.adBuildingM();
-        Buildings.createZoneTable();
+        Buildings.adBuildingW();//used to create table automatically on our mysql
+        Buildings.adBuildingM();//used to create table automatically on our mysql
+        Buildings.createZoneTable();//used to create table automatically on our mysql
 //        Dorm_Room .addRoom("dorrm");
         DormMaterial.defualDormWithMaterial();
         a.tringAdd();
