@@ -9,7 +9,7 @@ Constants.java: This file likely contains constant values used in the program. U
 Dorm_Access.java: The content of this file has been truncated, and its functionality cannot be determined from the provided code.
 DormMaterial.java: The content of this file has been truncated, and its functionality cannot be determined from the provided code.
 tryout.java: This file contains a main method where various methods from the Buildings class are called. It initializes the necessary database tables, adds buildings, creates zones, assigns proctors to buildings, and displays building details
-                                           #CONTRIBUTERS:
+                                             #CONTRIBUTERS: 
 1.Asdesach Asfaw
 2.Befikadu Tilahun
 3.Bana Dawit
