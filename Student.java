@@ -179,14 +179,9 @@ public class Student extends PersonInfo implements Constants {
         System.out.println(whereIsmyDorm(username));
     }
 
-    private static void insertStudent(Connection connection, String studentName, String building) throws SQLException {
-        String query = "INSERT INTO dorm_rooms (student_name, building) VALUES (?, ?)";
-        try (PreparedStatement preparedStatement = connection.prepareStatement(query)) {
-            preparedStatement.setString(1, studentName);
-            preparedStatement.setString(2, building);
-            preparedStatement.executeUpdate();
-        }
-    }
+
+
+    
 }
 
 
