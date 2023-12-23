@@ -16,7 +16,11 @@ public class Buildings implements Constants {
     public Buildings() {
         defaults();
     }
+/*
+this default method purpose: setup the buildings and zones and add bothe
+buliding and zone
 
+**/
     public void defaults() {
         addBuildingW("A3");
         addBuildingW("A1");
@@ -27,6 +31,10 @@ public class Buildings implements Constants {
         addZone("female");
         addZone("male");
     }
+    /*
+    this addBuilding methodd purpose is to add building to buildingW table in the database
+    table in database
+    **/
 
     public static void addBuildingW(String name) {
         try (Connection connection = DriverManager.getConnection(JDBC_URL, USERNAME, PASSWORD)) {
