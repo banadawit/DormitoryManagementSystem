@@ -57,6 +57,7 @@ public class DormMaterial extends Dorm_Room implements Constants {
             e.printStackTrace();
         }
     }
+    // giving condition with case
 
     public static void addMaterial(String type, int num, String room) {
         try (Connection connection = DriverManager.getConnection(JDBC_URL, USERNAME, PASSWORD)) {

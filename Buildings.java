@@ -163,14 +163,17 @@ public class Buildings implements Constants {
     }
 
     static void navbar() throws InterruptedException, IOException {
-        System.out.println("\n\n");
-        System.out.println("\t\t 1. display building available ");
-        System.out.println("\t\t 2. display Proctor with their assigned Building");
-        System.out.println("\t\t 3. Add new building ");
-        System.out.println("\t\t 4. Add new  Zone ");
-        System.out.println("\t\t 5. Add new proctort to Building ");
-        System.out.println("\t\t 6 or any key to back to homePage ");
-        System.out.println("\t\t 7.exit ");
+        System.out.println("\u001B[35m");
+        System.out.println("\t---****WELL COME TO BUILDING SYSTEM****---");
+        System.out.println("\u001B[0m");
+        System.out.println("\t\t \uD83D\uDC491. display building available ");
+        System.out.println("\t\t \uD83D\uDC492. display Proctor with their assigned Building");
+        System.out.println("\t\t \uD83D\uDC493. Add new building ");
+        System.out.println("\t\t \uD83D\uDC494. Add new  Zone ");
+        System.out.println("\t\t \uD83D\uDC495. Add new proctort to Building ");
+        System.out.println("\t\t \uD83D\uDC496 or any key to back to homePage ");
+        System.out.println("\t\t \uD83D\uDC497.exit ");
+
         Scanner read = new Scanner(System.in);
         int ch = read.nextInt();
         Switcher(ch);
