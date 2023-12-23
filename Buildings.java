@@ -10,8 +10,8 @@ import java.util.Set;
 
 public class Buildings implements Constants {
     private static final String JDBC_URL = "jdbc:mysql://localhost:3306/DORMITORY";
-    private static final String USERNAME = "ayana";
-    private static final String PASSWORD = "ayu10upme";
+    private static final String USERNAME = "root";
+    private static final String PASSWORD = "****";
 
     public Buildings() {
         defaults();
