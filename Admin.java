@@ -53,12 +53,15 @@ public class Admin extends PersonInfo implements AdminPage, Constants {
                 // navigation
                 int ch = 0;
                 while (ch != 5) {
-                    System.out.println("\t\tCHOOSE WHAT TO DO");
+                    System.out.println("\u001B[32m");
+                    System.out.println("\t\t---****CHOOSE WHAT TO DO****----");
+                    System.out.println("\t---------------------------------------");
+                    System.out.println("\u001B[0m");
                     System.out.println(
-                            "\t1. About student:"
-                                    + "\n\t2. About proctor: "
-                                    + "\n\t3. About Building to system:"
-                                    + "\n\t4. exit");
+                            "\t\t\t\uD83D\uDC491. About student:"
+                                    + "\n\t\t\t\uD83D\uDC492. About proctor: "
+                                    + "\n\t\t\t\uD83D\uDC493. About Building to system:"
+                                    + "\n\t\t\t\uD83D\uDC494. exit");
                     ch = read.nextInt();
                     switch (ch) {
                         case 1:
