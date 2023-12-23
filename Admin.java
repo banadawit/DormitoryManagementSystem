@@ -249,7 +249,7 @@ class tyring {
         Buildings.adBuildingM();//used to create table automatically on our mysql
         Buildings.createZoneTable();//used to create table automatically on our mysql
 //        Dorm_Room .addRoom("dorrm");
-        DormMaterial.defualDormWithMaterial();
+        DormMaterial.defualDormWithMaterial();//used to create the dorm material
         a.tringAdd();
         a.AdminLog();
     }
