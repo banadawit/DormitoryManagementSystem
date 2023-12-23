@@ -30,8 +30,11 @@ public class Admin extends PersonInfo implements AdminPage, Constants {
     static String psd = "a";
     public void AdminLog() throws InterruptedException, IOException {
         Scanner read = new Scanner(System.in);
-        System.out.println("---------welcome to admin page:------------ \n");
-        System.out.print("Login to your account here; \n Enter your user name: ");
+        System.out.print("\u001b[38;5;208m");
+        System.out.println("\t\t-----***WELL COME TO ADMIN PAGE***-------");
+        System.out.println("\t--------------------------------------------------");
+        System.out.print("\u001b[0m");
+        System.out.print("\t\t\tLogin to your account here: \n\t\t\tEnter your user name: ");
         String name = "";
         String psd = "";
         try (read) {
