@@ -15,7 +15,7 @@ public class Home {
             System.out.print("\u001B[31m");
             System.out.print("\u001B[1m");
             System.out.println("\t\t----*****WELCOME TO DORMITORY MANAGEMENT SYSTEM****------");
-            System.out.println("\t-----------------------------------------------------------------");
+            System.out.println("\t-------------------------------------------------------------------");
             System.out.print("\u001B[0m");
             System.out.print("\u001B[0m");
             System.out.println("\t\t\t\tEnter What Type of user are you Choose \n\t\t\t\t\t\uD83D\uDC491. Admin\n" +
