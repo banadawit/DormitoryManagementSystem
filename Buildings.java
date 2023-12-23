@@ -68,7 +68,10 @@ buliding and zone
             e.printStackTrace();
         }
     }
-
+/*
+this addZone method add Zone (male for female dorm building) and add data to the zone table
+that is aothomatically created
+**/
     public static void addZone(String type) {
         try (Connection connection = DriverManager.getConnection(JDBC_URL, USERNAME, PASSWORD)) {
             createZoneTable();
