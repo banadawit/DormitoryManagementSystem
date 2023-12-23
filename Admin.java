@@ -55,7 +55,7 @@ public class Admin extends PersonInfo implements AdminPage, Constants {
                 while (ch != 5) {
                     System.out.println("\u001B[32m");
                     System.out.println("\t\t---****CHOOSE WHAT TO DO****----");
-                    System.out.println("\t-------------------------------------");
+                    System.out.println("\t---------------------------------------");
                     System.out.println("\u001B[0m");
                     System.out.println(
                             "\t\t\t\uD83D\uDC491. About student:"
