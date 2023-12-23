@@ -54,7 +54,7 @@ public class Student extends PersonInfo implements Constants {
     public Student() {
 
     }
-
+//selecting data
     public static void addToDorm() {
         try (Connection connection = DriverManager.getConnection(JDBC_URL, USERNAME, PASSWORD)) {
             String getStudentsQuery = "SELECT student_name FROM dorm_rooms";
