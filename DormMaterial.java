@@ -3,7 +3,7 @@ import java.sql.*;
 public class DormMaterial extends Dorm_Room implements Constants {
     private static final String JDBC_URL = "jdbc:mysql://localhost:3306/dormitory";
     private static final String USERNAME = "root";
-    private static final String PASSWORD = "banned1234";
+    private static final String PASSWORD = "bef@2623";
 
     private static int bedNum = 5;
     private static int lockerNum = 5;
