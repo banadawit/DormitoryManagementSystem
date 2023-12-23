@@ -166,10 +166,6 @@ public class Admin extends PersonInfo implements AdminPage, Constants {
         System.out.println("Enter the id of student");
         int id = read.nextInt();
 
-        // Get the dorm/room name where the student will be assigned
-        System.out.println("Enter the dorm/room name: ");
-        String dormName = read.next();
-
         try {
             String sql = "INSERT INTO students (name, gender, id, type) VALUES (?, ?, ?, ?)";
             try (PreparedStatement preparedStatement = connection.prepareStatement(sql)) {
@@ -181,7 +177,7 @@ public class Admin extends PersonInfo implements AdminPage, Constants {
             }
 
             // Insert the student into the dorm_rooms table
-            Dorm_Room.insertStudentToDorm(connection, name, dormName);
+//            Dorm_Room.insertStudentToDorm(connection, name, dormName);
 
         } catch (SQLException e) {
             e.printStackTrace();
