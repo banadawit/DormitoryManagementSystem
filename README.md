@@ -11,7 +11,7 @@ DormMaterial.java: The content of this file has been truncated, and its function
 tryout.java: This file contains a main method where various methods from the Buildings class are called. It initializes the necessary database tables, adds buildings, creates zones, assigns proctors to buildings, and displays building details
                                            #CONTRIBUTERS:
 1.Asdesach Asfaw
-2.
-3.
-4
-5.
+2.Befikadu Tilahun
+3.Bana Dawit
+4Ayana File
+5.Amanuel Abate
