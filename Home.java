@@ -15,9 +15,6 @@ public class Home {
         if (ch == 1) {
             Admin a = new Admin();
             a.tringAdd();
-            // a.DisplayStudentList();
-            // a.removeStudent("A");
-            // a.DisplayStudentList();
             a.AdminLog();
             // a.DisplayStudentList();
         } else if (ch == 3) {
