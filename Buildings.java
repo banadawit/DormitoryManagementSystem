@@ -85,7 +85,9 @@ that is aothomatically created
             e.printStackTrace();
         }
     }
-
+/*
+this DisplayBuilding method display both buildingW and buildingM
+**/
     public static void DisplayBuilding() {
         try (Connection connection = DriverManager.getConnection(JDBC_URL, USERNAME, PASSWORD)) {
             String selectQuery = "SELECT * FROM buildingW UNION SELECT * FROM buildingM";
