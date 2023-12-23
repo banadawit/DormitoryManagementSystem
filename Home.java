@@ -11,9 +11,17 @@ public class Home {
         try {
             String ty = ""; // Variable to store user type (unused)
             Scanner read = new Scanner(System.in);
-            System.out.println("==========WELCOME TO DORMITORY MANAGEMENT SYSTEM");
-            System.out.println("Enter what type of user you are:");
-            System.out.println("\t1 Admin\n\t2 Proctor\n\t3 Student");
+
+            System.out.print("\u001B[31m");
+            System.out.print("\u001B[1m");
+            System.out.println("\t\t----*****WELCOME TO DORMITORY MANAGEMENT SYSTEM****------");
+            System.out.println("\t-----------------------------------------------------------------");
+            System.out.print("\u001B[0m");
+            System.out.print("\u001B[0m");
+            System.out.println("\t\t\t\tEnter What Type of user are you Choose \n\t\t\t\t\t\uD83D\uDC491. Admin\n" +
+                                                                                 "\t\t\t\t\t\uD83D\uDC492. Proctor" +
+                                                                                  "\n\t\t\t\t\t\uD83D\uDC493. student");
+
             int ch = read.nextInt(); // Read user input
             if (ch == 1) { // If user is an admin
                 Admin a = new Admin(); // Create Admin object
