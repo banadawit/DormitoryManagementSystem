@@ -50,7 +50,10 @@ buliding and zone
             e.printStackTrace();
         }
     }
-
+    /*
+    this addBuilding methodd purpose is to add building to buildingM table in the database
+    table in database
+    **/
     public static void addBuildingM(String name) {
         try (Connection connection = DriverManager.getConnection(JDBC_URL, USERNAME, PASSWORD)) {
             createBuildingTable("buildingM");
