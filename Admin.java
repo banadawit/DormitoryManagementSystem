@@ -32,7 +32,7 @@ public class Admin extends PersonInfo implements AdminPage, Constants {
         Scanner read = new Scanner(System.in);
         System.out.print("\u001b[38;5;208m");
         System.out.println("\t\t-----***WELL COME TO ADMIN PAGE***-------");
-        System.out.println("\t--------------------------------------------------");
+        System.out.println("\t-------------------------------------------------");
         System.out.print("\u001b[0m");
         System.out.print("\t\t\tLogin to your account here: \n\t\t\tEnter your user name: ");
         String name = "";
