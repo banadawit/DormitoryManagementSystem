@@ -142,7 +142,11 @@ prom procter table
             e.printStackTrace();
         }
     }
+/* 
+this getproctername method purpose is as its name says retieve  procter name assigned procter
+from procter table for the women assined
 
+**/
     static void getProctroNameWomen() {
         try (Connection connection = DriverManager.getConnection(JDBC_URL, USERNAME, PASSWORD)) {
             String selectQuery = "SELECT * FROM proctors WHERE gender != 'M'";
