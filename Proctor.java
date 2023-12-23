@@ -7,8 +7,6 @@ import java.util.Scanner;
 
 public class Proctor extends PersonInfo implements Constants {
 
-//    public static ArrayList<Proctor> proctors = new ArrayList<>();
-
     Proctor(String name, String gender, int id, int type) {
         setGender(gender);
         setUserName(name);
