@@ -39,8 +39,8 @@ public class Proctor extends PersonInfo implements Constants {
                     "\t\t\uD83D\uDC491. Add material to room\n"
                             +"\t\t\uD83D\uDC492. Checking material availability\n"
                             + "\t\t\uD83D\uDC493. Remove material to room\n"
-                            + "\t\t\uD83D\uDC494. Assign student from dorm\n");
-                             + "\t\t\uD83D\uDC495 removing student from dorm\n");
+                            + "\t\t\uD83D\uDC494. Assign student from dorm\n"
+                            +"\t\t\uD83D\uDC495 removing student from dorm\n");
 
             n = read.nextInt();
             switch (n) {
