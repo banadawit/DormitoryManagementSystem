@@ -112,10 +112,10 @@ public class Dorm_Access {
         roomB.roomName = "roomB";
         Dorm_Room roomC = new Dorm_Room();
         roomC.roomName = "roomC";
-        Dorm_Room.addRoom(room2.roomName);
-        Dorm_Room.addRoom(roomC.roomName);
-        Dorm_Room.addRoom(room1.roomName);
-        Dorm_Room.addRoom(roomB.roomName);
+        Dorm_Room.addRoom(room2.roomName);//used to give the room name
+        Dorm_Room.addRoom(roomC.roomName);//used to give the room name
+        Dorm_Room.addRoom(room1.roomName);//used to give the room name
+        Dorm_Room.addRoom(roomB.roomName);//used to give the room name
         System.out.println(Dorm_Room.rooms);
 
 //        Student[] stud = {};
