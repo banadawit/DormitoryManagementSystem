@@ -8,9 +8,15 @@ class Dorm_Room extends Buildings {
     static int studcounter;
     static int bedcounter = 0;
     String roomName;
+<<<<<<< HEAD
     private static final String JDBC_URL = "jdbc:mysql://localhost:3306/dormitory";
     private static final String USERNAME = "root";
     private static final String PASSWORD = "aman1928;;,.";
+=======
+    private static final String JDBC_URL = "jdbc:mysql://localhost:3306/ur_database";
+    private static final String USERNAME = "user_name";
+    private static final String PASSWORD = "ayu10upme";
+>>>>>>> 3a26ae6ea4d79c49ec076590d36c3a33efb50272
 
     public static void addRoom(String rm) {
         try (Connection connection = DriverManager.getConnection(JDBC_URL, USERNAME, PASSWORD)) {

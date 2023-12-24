@@ -39,11 +39,11 @@ public class Home {
             else {
                 System.out.println("Wrong input");
             }
-        } catch (InputMismatchException e) { // Catch input mismatch exception
+        } catch (InputMismatchException e) {
             System.out.println("Invalid input. Please enter a valid choice.");
-        } catch (IOException e) { // Catch IO exception
+        } catch (IOException e) {
             System.out.println("An error occurred while reading input: " + e.getMessage());
-        } catch (Exception e) { // Catch any other exception
+        } catch (Exception e) { 
             System.out.println("An error occurred: " + e.getMessage());
         }
     }
