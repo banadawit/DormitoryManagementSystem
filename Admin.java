@@ -4,20 +4,36 @@ import java.io.IOException;
 import java.sql.*;
 import java.util.Scanner;
 
+/**
+ * An interface representing administrative functions for managing students and building details.
+ */
 interface AdminPage {
+    /**
+     * Registers a new student.
+     */
     void registerNewStudent();
-
+    /**
+     * Adds a proctor.
+     */
     void addProcter();
-
+    /**
+     * Removes a student based on the given name.
+     *
+     * @param name The name of the student to be removed.
+     */
     public void removeStudent(String name);
+    /**
+     * Displays the list of students.
+     */
 
     void DisplayStudentList();
+    /**
+     * Displays details of a building based on the given name.
+     *
+     * @param name The name of the building.
+     */
 
     void displayBuildingDetail(String name);
-}
-// using interface
-interface IdGenerator {
-    int generateId();
 }
 public class Admin extends PersonInfo implements AdminPage, Constants {
 
