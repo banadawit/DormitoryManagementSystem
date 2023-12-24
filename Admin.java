@@ -40,10 +40,9 @@ public class Admin extends PersonInfo implements AdminPage, Constants {
     // you have to insert your real database name
     // and also your user name in terms of user_name
     // and also your password in terms of user_password
-    private static final String JDBC_URL = "jdbc:mysql://localhost:3306/dormitory";
-    private static final String USERNAME = "ayana";
-    private static final String PASSWORD = "ayu10upme";
-
+    private static final String JDBC_URL = "jdbc:mysql://localhost:3306/ur_database";
+    private static final String USERNAME = "user_name";
+    private static final String PASSWORD = "user_password";
     private Connection connection;
 
     static String name = "a";

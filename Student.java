@@ -7,9 +7,9 @@ import java.util.*;
 public class Student extends PersonInfo implements Constants {
     static int studcounter;
     int nextId = 1;
-    private static final String JDBC_URL = "jdbc:mysql://localhost:3306/dormitory";
-    private static final String USERNAME = "ayana";
-    private static final String PASSWORD = "ayu10upme";
+    private static final String JDBC_URL = "jdbc:mysql://localhost:3306/ur_database";
+    private static final String USERNAME = "user_name";
+    private static final String PASSWORD = "user_password";
 
     static {
         // Creating dorm_rooms table during initialization
