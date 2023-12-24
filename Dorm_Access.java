@@ -39,24 +39,6 @@ class Dorm_Room extends Buildings {
         // No need for this method as we manage building and rooms separately in tables.
     }
 
-    public boolean dormIsEmpty(String roomName) {
-        try (Connection connection = DriverManager.getConnection(JDBC_URL, USERNAME, PASSWORD)) {
-            String selectDormQuery = "SELECT * FROM dorm_rooms WHERE room_name = ?";
-            try (PreparedStatement preparedStatement = connection.prepareStatement(selectDormQuery)) {
-                preparedStatement.setString(1, roomName);
-                try (ResultSet resultSet = preparedStatement.executeQuery()) {
-                    if (!resultSet.next()) {
-                        System.out.println("is empty");
-                        return true;
-                    }
-                }
-            }
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-        System.out.println("has students");
-        return false;
-    }
 
     public static String isInbluilding(String roomName) {
         try (Connection connection = DriverManager.getConnection(JDBC_URL, USERNAME, PASSWORD)) {
