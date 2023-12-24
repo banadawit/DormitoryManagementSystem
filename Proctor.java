@@ -38,8 +38,8 @@ public class Proctor extends PersonInfo implements Constants {
             System.out.println(
                     "\t\t\uD83D\uDC491. Add material to room\n"
                             +"\t\t\uD83D\uDC492. Checking material availability\n"
-                            + "\t\t\uD83D\uDC493. Remove material to room\n"
-                            + "\t\t\uD83D\uDC494. Assign student from dorm\n"
+                            + "\t\t\uD83D\uDC493. Remove material from room\n"
+                            + "\t\t\uD83D\uDC494. Assign student to dorm\n"
                             +"\t\t\uD83D\uDC495 removing student from dorm\n");
 
             n = read.nextInt();
@@ -48,7 +48,7 @@ public class Proctor extends PersonInfo implements Constants {
                     DormMaterial.displayBed();
                     break;
                 case 2:
-                    System.out.println(" choose type to be added\n "
+                    System.out.println(" choose typeof matterial  to be added\n "
                             + "\t1. Locker \n\t2.Bed \n\t3.table");
                     int ch = read.nextInt();
                     String type = "";
