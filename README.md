@@ -59,10 +59,3 @@ It provides a user interface for selecting the type of user (Admin, Proctor, or 
 and redirects the user to the corresponding functionality.
 
 
-
-    #CONTRIBUTERS: 
-1.Amanuel Abate
-2.Asdesach Asfaw
-3.Ayana File
-4.Bana Dawit
-5.Befikadu Tilahun
