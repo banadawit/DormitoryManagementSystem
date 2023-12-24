@@ -7,15 +7,12 @@ import java.util.*;
 public class Student extends PersonInfo implements Constants {
     static int studcounter;
     int nextId = 1;
-<<<<<<< HEAD
-    private static final String JDBC_URL = "jdbc:mysql://localhost:3306/dormitory";
-    private static final String USERNAME = "root";
-    private static final String PASSWORD = "aman1928;;,.";
-=======
+
+
     private static final String JDBC_URL = "jdbc:mysql://localhost:3306/ur_database";
     private static final String USERNAME = "user_name";
     private static final String PASSWORD = "user_password";
->>>>>>> 3a26ae6ea4d79c49ec076590d36c3a33efb50272
+
 
     static {
         // Creating dorm_rooms table during initialization
