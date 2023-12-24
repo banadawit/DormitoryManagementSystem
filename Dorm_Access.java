@@ -9,8 +9,8 @@ class Dorm_Room extends Buildings {
     static int bedcounter = 0;
     String roomName;
     private static final String JDBC_URL = "jdbc:mysql://localhost:3306/dormitory";
-    private static final String USERNAME = "root";
-    private static final String PASSWORD = "banned1234";
+    private static final String USERNAME = "user_name";
+    private static final String PASSWORD = "password";
 
     public static void addRoom(String rm) {
         try (Connection connection = DriverManager.getConnection(JDBC_URL, USERNAME, PASSWORD)) {
