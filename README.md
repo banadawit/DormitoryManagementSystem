@@ -1,4 +1,11 @@
-  Dormitory Management System:- 
+//Group Name And ID:-                          Git_account
+//        1. AMANUEL ABATE --- 2122/14  ----   amanabate
+//        2. AYANA FILE --- 2226/14     ----    ayu10up
+//        3. ASDESACH ASFAW --- 2193/14  -----  Asdesac
+//        4. BANA DAWIT ---- 2245/14    -----  banadawit
+//        5. BEFIKADU TILAHUN --- 2268/14  --- atwil  
+
+Dormitory Management System:- 
   
   This Dormitory Management System is designed to efficiently 
   manage dorm-related tasks, including student assignments,
