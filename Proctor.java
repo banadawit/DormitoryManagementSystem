@@ -44,10 +44,8 @@ public class Proctor extends PersonInfo implements Constants {
 
             n = read.nextInt();
             switch (n) {
+
                 case 1:
-                    DormMaterial.displayBed();
-                    break;
-                case 2:
                     System.out.println(" choose typeof matterial  to be added\n "
                             + "\t1. Locker \n\t2.Bed \n\t3.table");
                     int ch = read.nextInt();
@@ -65,6 +63,9 @@ public class Proctor extends PersonInfo implements Constants {
                     System.out.print("Enter dorm name");
                     String roomN = read.next();
                     DormMaterial.addMaterial(type, No, roomN);  //// have error
+                    break;
+                case 2:
+                    DormMaterial.displayBed();
                     break;
 //                case 3:
 //                    break;

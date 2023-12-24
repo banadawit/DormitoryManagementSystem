@@ -6,9 +6,8 @@ public class DormMaterial extends Dorm_Room implements Constants {
     // and also your user name in terms of user_name
     // and also your password in terms of user_password
     private static final String JDBC_URL = "jdbc:mysql://localhost:3306/dormitory";
-    private static final String USERNAME = "ayana";
-    private static final String PASSWORD = "ayu10upme";
-
+    private static final String USERNAME = "root";
+    private static final String PASSWORD = "aman1928;;,.";
     private static int bedNum = 5;
     private static int lockerNum = 5;
     private static int tableNum = 2;

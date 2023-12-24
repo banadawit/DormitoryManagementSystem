@@ -41,9 +41,8 @@ public class Admin extends PersonInfo implements AdminPage, Constants {
     // and also your user name in terms of user_name
     // and also your password in terms of user_password
     private static final String JDBC_URL = "jdbc:mysql://localhost:3306/dormitory";
-    private static final String USERNAME = "ayana";
-    private static final String PASSWORD = "ayu10upme";
-
+    private static final String USERNAME = "root";
+    private static final String PASSWORD = "aman1928;;,.";
     private Connection connection;
 
     static String name = "a";
@@ -65,7 +64,7 @@ public class Admin extends PersonInfo implements AdminPage, Constants {
             } catch (Exception e) {
                 System.out.println("error happen" + e.getMessage());
             }
-            System.out.print("Enter password: ");
+            System.out.print("\t\t\tEnter password: ");
             psd = read.next();
 
             if (login(name, psd)) {

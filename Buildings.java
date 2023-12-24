@@ -13,8 +13,8 @@ public class Buildings implements Constants {
     // and also your user name in terms of user_name
     // and also your password in terms of user_password
     private static final String JDBC_URL = "jdbc:mysql://localhost:3306/dormitory";
-    private static final String USERNAME = "ayana";
-    private static final String PASSWORD = "ayu10upme";
+    private static final String USERNAME = "root";
+    private static final String PASSWORD = "aman1928;;,.";
 
     public Buildings() {
         defaults();
@@ -169,11 +169,11 @@ public class Buildings implements Constants {
         System.out.println("\u001B[35m");
         System.out.println("\t---****WELL COME TO BUILDING SYSTEM****---");
         System.out.println("\u001B[0m");
-        System.out.println("\t\t \uD83D\uDC491. display building available ");
-        System.out.println("\t\t \uD83D\uDC492. display Proctor with their assigned Building");
-        System.out.println("\t\t \uD83D\uDC493. Add new building ");
-        System.out.println("\t\t \uD83D\uDC494. Add new  Zone ");
-        System.out.println("\t\t \uD83D\uDC495. Add new proctort to Building ");
+        System.out.println("\t\t \uD83D\uDC491. Add new building ");
+        System.out.println("\t\t \uD83D\uDC492. Add new  Zone ");
+        System.out.println("\t\t \uD83D\uDC493. display building available ");
+        System.out.println("\t\t \uD83D\uDC494. display Proctor with their assigned Building");
+        System.out.println("\t\t \uD83D\uDC495. Add new proctor to Building ");
         System.out.println("\t\t \uD83D\uDC496 or any key to back to homePage ");
         System.out.println("\t\t \uD83D\uDC497.exit ");
 
@@ -183,25 +183,16 @@ public class Buildings implements Constants {
     }
 
     static public void displayBuildingDetail(String name) throws InterruptedException, IOException {
-        System.out.println("\t\t\t Welcome \n\t\t\t HERE ARE ABOUT DORMTORY \n");
-        System.out.println("\t\t press any key you want to navigate in");
+        System.out.println("\t\t\t WELL COME->\t\t\t HERE ARE ABOUT DORMTORY ");
+        System.out.println("\t\t press any key you want to navigate in:");
         navbar();
     }
 
     static void Switcher(int ch) throws InterruptedException, IOException {
         Scanner read = new Scanner(System.in);
         switch (ch) {
+
             case 1:
-                new ProcessBuilder("cmd", "/c", "cls").inheritIO().start().waitFor();
-                DisplayBuilding();
-                navbar();
-                break;
-            case 2:
-                new ProcessBuilder("cmd", "/c", "cls").inheritIO().start().waitFor();
-                DisplayBuildingWithProctor();
-                navbar();
-                break;
-            case 3:
                 new ProcessBuilder("cmd", "/c", "cls").inheritIO().start().waitFor();
                 System.out.print("\t Enter Building Name: ");
                 String bd = read.nextLine();
@@ -228,7 +219,7 @@ public class Buildings implements Constants {
                 System.out.println(
                         "\t\t Add the new building to Zone "
                                 + "\t\t\n Available zone is Female and Male:" +
-                                " \n \t\t Enter one of them");
+                                 " \n\t\t Enter one of them");
                 String reads = read.next();
                 if (reads.equalsIgnoreCase("Female")) {
                     addBuildingW(bd);
@@ -239,13 +230,25 @@ public class Buildings implements Constants {
                 } else
                     navbar();
                 break;
-            case 4:
+            case 2:
                 new ProcessBuilder("cmd", "/c", "cls").inheritIO().start().waitFor();
                 System.out.println("\t\t are you sure to create new zone? \n if so: Enter Zone name");
                 String newZone = read.nextLine();
                 addZone(newZone);
                 navbar();
                 break;
+
+            case 3:
+                new ProcessBuilder("cmd", "/c", "cls").inheritIO().start().waitFor();
+                DisplayBuilding();
+                navbar();
+                break;
+            case 4:
+                new ProcessBuilder("cmd", "/c", "cls").inheritIO().start().waitFor();
+                DisplayBuildingWithProctor();
+                navbar();
+                break;
+
             case 5:
                 new ProcessBuilder("cmd", "/c", "cls").inheritIO().start().waitFor();
                 System.out.println("\t\t Enter the building name to add proctors you have in data");
