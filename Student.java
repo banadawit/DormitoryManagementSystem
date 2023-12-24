@@ -26,23 +26,23 @@ public class Student extends PersonInfo implements Constants {
         }
     }
 //building forms
-    public static String whereIsmyDorm(String studName) {
-        try (Connection connection = DriverManager.getConnection(JDBC_URL, USERNAME, PASSWORD)) {
-            String query = "SELECT building FROM dorm_rooms WHERE student_name = ?";
-            try (PreparedStatement preparedStatement = connection.prepareStatement(query)) {
-                preparedStatement.setString(1, studName);
-                try (ResultSet resultSet = preparedStatement.executeQuery()) {
-                    if (resultSet.next()) {
-                        return "You are in " + resultSet.getString("building") +
-                                Dorm_Room.isInbluilding(resultSet.getString("building"));
-                    }
-                }
-            }
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-        return "Not found";
-    }
+//    public static String whereIsmyDorm(String studName) {
+//        try (Connection connection = DriverManager.getConnection(JDBC_URL, USERNAME, PASSWORD)) {
+//            String query = "SELECT building FROM dorm_rooms WHERE student_name = ?";
+//            try (PreparedStatement preparedStatement = connection.prepareStatement(query)) {
+//                preparedStatement.setString(1, studName);
+//                try (ResultSet resultSet = preparedStatement.executeQuery()) {
+//                    if (resultSet.next()) {
+//                        return "You are in " + resultSet.getString("building") +
+//                                Dorm_Room.isInbluilding(resultSet.getString("building"));
+//                    }
+//                }
+//            }
+//        } catch (SQLException e) {
+//            e.printStackTrace();
+//        }
+//        return "Not found";
+//    }
 
     Student(String username, String gender, int id, int type) {
         setUserName(username);
@@ -140,9 +140,8 @@ public class Student extends PersonInfo implements Constants {
         System.out.println("\t------------------------------------------------");
         System.out.println("\u001B[0m");
         System.out.println("\t\t\t\uD83D\uDC491. Add new student:"
-                + "\n\t\t\t\uD83D\uDC492. Remove some student"
-                + "\n\t\t\t\uD83D\uDC493. search students dormF"
-                + "\n\t\t\t\uD83D\uDC494. See lists of all Student ");
+                + "\n\t\t\t\uD83D\uDC492. Remove  student"
+                + "\n\t\t\t\uD83D\uDC493. See lists of all Student ");
 
         int ch = read.nextInt();
         switch (ch) {
@@ -157,15 +156,7 @@ public class Student extends PersonInfo implements Constants {
                 (new Admin()).removeStudent(read.next());
                 break;
             case 3:
-                new ProcessBuilder("cmd", "/c", "cls").inheritIO().start().waitFor();
-                String srch = "";
-                System.out.print("Enter name to search: ");
-                String n = read.nextLine();
-                srch = read.nextLine();
-                String e = whereIsmyDorm(srch);
-                System.out.println(e);
-                break;
-            case 4:
+//
                 // new ProcessBuilder("cmd", "/c", "cls").inheritIO().start().waitFor();
                 (new Admin()).DisplayStudentList();
                 break;
@@ -182,7 +173,7 @@ public class Student extends PersonInfo implements Constants {
         Scanner read = new Scanner(System.in);
         System.out.print("Enter your username: ");
         String username = read.nextLine();
-        System.out.println(whereIsmyDorm(username));
+//        System.out.println(whereIsmyDorm(username));
     }
 
     private static void insertStudent(Connection connection, String studentName, String building) throws SQLException {
