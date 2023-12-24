@@ -132,7 +132,8 @@ public class Admin extends PersonInfo implements AdminPage, Constants {
         try {
             Statement statement = connection.createStatement();
 
-            // Create students table
+            // this is mysql commands that create the student table into userdefind
+            //database this is best because it create table automatically
             String createStudentsTable = "CREATE TABLE IF NOT EXISTS students (" +
                     "id INT PRIMARY KEY," +
                     "name VARCHAR(255)," +
